@@ -14,16 +14,148 @@
   </head>
   <body>
     <div class="container">
+      <header>
+        <nav>
+          <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Navbar</a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"
+                      >Home</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Dropdown
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li>
+                        <a class="dropdown-item" href="#">Another action</a>
+                      </li>
+                      <li><hr class="dropdown-divider" /></li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Something else here</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled" aria-disabled="true"
+                      >Disabled</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </nav>
+      </header>
+      <!-- header end -->
+
       <h1>Cafe Connect</h1>
 
-      <h2>Restaurants available</h2>
+      <div id="errorMessage"></div>
+
+      <h2>About</h2>
 
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit,
         accusamus. Molestias laborum numquam impedit tempora incidunt minima,
         sapiente eveniet facilis, quidem qui ipsa excepturi architecto quos
-        nobis iusto. Officia, dolor!
+        nobis iusto. Officia, dolor! Lo
       </p>
+
+      <!-- <div id="restaurants"></div> -->
+      <section>
+        <h class="h2"> Featured restaurants in SF Chinatown</h>
+        <div class="row">
+          <div class="col-3">
+            <div class="h3">Filter by Amenties</div>
+          </div>
+          <div class="col-8">
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input amenties"
+                type="checkbox"
+                name="wifi"
+              />
+              <label class="form-check-label" for="inlineCheckbox1">wifi</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input amenties"
+                type="checkbox"
+                name="outlet"
+              />
+              <label class="form-check-label" for="inlineCheckbox2"
+                >outlet</label
+              >
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input amenties"
+                type="checkbox"
+                name="restroom"
+              />
+              <label class="form-check-label" for="inlineCheckbox2"
+                >restroom</label
+              >
+            </div>
+          </div>
+        </div>
+
+        <div id="restaurants" class="row">
+          <div class="col-4">
+            <div class="card" style="width: 18rem">
+              <img
+                src="https://media-cdn.tripadvisor.com/media/photo-m/1280/28/39/46/13/view-of-san-francisco.jpg"
+                class="card-img-top"
+                alt="some image description"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">An item</li>
+                <li class="list-group-item">A second item</li>
+                <li class="list-group-item">A third item</li>
+              </ul>
+              <div class="card-body">
+                <a href="#" class="card-link">Card link</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /card -->
+      </section>
     </div>
 
     <script
