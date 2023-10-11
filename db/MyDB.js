@@ -25,11 +25,32 @@ function MyDB() {
     }
 
     const { client, db } = connect();
-
     const restaurantsCollection = db.collection("approvedRestaurants");
 
     try {
       return await restaurantsCollection.find(query).limit(20).toArray();
+    } finally {
+      console.log("db closing connection");
+      client.close();
+    }
+  };
+
+  myDB.updateRestaurantAmenities = async (restaurantId, updatedAmenities) => {
+    const { client, db } = connect();
+    const restaurantsCollection = db.collection("approvedRestaurants");
+
+    try {
+      const result = await restaurantsCollection.updateOne(
+        { _id: new MongoClient.ObjectID(restaurantId) },
+        {
+          $inc: updatedAmenities.reduce((acc, amentiy) => {
+            acc[`Amenities.${amentiy}`] += 1;
+            return acc;
+          }, {}),
+        }
+      );
+
+      return result.matchedCount > 0;
     } finally {
       console.log("db closing connection");
       client.close();
