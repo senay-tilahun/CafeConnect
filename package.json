@@ -2,11 +2,11 @@
   "name": "cafeconnect",
   "version": "1.0.0",
   "description": "CafeConnect is your go-to platform for discovering restaurants with essential amenities, catering to digital nomads, students, and anyone seeking a place to get wifi access, use restroom, or charge their phone. An important feature is a database of restaurants in the Chinatown, San Francisco area on the front page, with key information displayed. It will also have a form to let users add information about new restaurants in the area, and a form to let users update those key attributes (wifi, power outlet, restroom) for existing restaurants in the database.",
-  "main": "index.js",
+  "main": "backend.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./node_modules/nodemon/bin/nodemon.js index.js"
+    "start": "node ./node_modules/nodemon/bin/nodemon.js backend.js"
   },
   "author": "Huiqin Hu && Senay Tilahun",
   "license": "MIT",
@@ -17,5 +17,7 @@
     "prettier": "^3.0.3"
   },
   "dependencies": {
+    "express": "^4.18.2",
+    "mongodb": "^6.1.0"
   }
 }
