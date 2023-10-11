@@ -1,6 +1,7 @@
 function FrontEnd() {
   const me = {
     amenities: [],
+    editing: false,
   };
 
   me.showErrorMessage = (message, type = "danger") => {
@@ -34,7 +35,7 @@ function FrontEnd() {
   const renderRestaurant = (restaurant) => {
     return `
     <div class="col-4">
-        <div class="listing card">
+        <div class="restaurant card">
             <img height="300px"
                 src="${restaurant.image}"
                 class="card-img-top"
@@ -42,13 +43,46 @@ function FrontEnd() {
             />
             <div class="card-body">
                 <h2 class="card-title">${restaurant.name}</h2>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">wifi: ${restaurant.Amenities.wifi}</li>
-                    <li class="list-group-item">outlet: ${restaurant.Amenities.outlet}</li>
-                    <li class="list-group-item">restroom: ${restaurant.Amenities.restroom}</li>
+                <ul class="list-group list-group-flush" id="am-${restaurant._id}">
+                    <li class="list-group-item">wifi: ${restaurant.Amenities.wifi} votes</li>
+                    <li class="list-group-item">outlet: ${restaurant.Amenities.outlet} votes</li>
+                    <li class="list-group-item">restroom: ${restaurant.Amenities.restroom} votes</li>
+                </ul>
+                <ul class="list-group list-group-flush d-none" id="up-${restaurant._id}">
+                    <li class="list-group-item">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input edit-amenties"
+                          type="checkbox"
+                          name="wifi"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1">wifi</label>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input edit-amenties"
+                        type="checkbox"
+                        name="outlet"
+                      />
+                      <label class="form-check-label" for="inlineCheckbox2">outlet</label>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input edit-amenties"
+                        type="checkbox"
+                        name="restroom"
+                      />
+                      <label class="form-check-label" for="inlineCheckbox3">restroom</label>
+                    </div>
+                  </li>
                 </ul>
                 <div class="card-body">
-                    <a href="#" class="card-link">edit</a>
+                    <button type="button" onClick="frontend.editingListener('${restaurant._id}')" id="ed-${restaurant._id}" class="card-link">edit</button>
+                    <button type="button" onClick="frontend.savingListener('${restaurant._id}')" id="sv-${restaurant._id}" class="card-link d-none">Save</button>
                 </div>
             </div>
         </div>
@@ -74,6 +108,61 @@ function FrontEnd() {
         me.reloadRestaurants();
       });
     });
+  };
+
+  me.editingListener = (restaurantId) => {
+    console.log("editing.. " + restaurantId);
+    document.getElementById("am-" + restaurantId).classList.add("d-none");
+    document.getElementById("ed-" + restaurantId).classList.add("d-none");
+    document.getElementById("up-" + restaurantId).classList.remove("d-none");
+    document.getElementById("sv-" + restaurantId).classList.remove("d-none");
+  };
+
+  me.savingListener = async (restaurantId) => {
+    console.log("saving updates to ... " + restaurantId);
+
+    // api call - update DB
+    const updatingRestaurantCheckboxes = document.querySelectorAll(
+      ".edit-amenties:checked"
+    );
+
+    // create array for the updated amentiess
+    const updatedAmenities = Array.from(updatingRestaurantCheckboxes).map(
+      (checkbox) => checkbox.name
+    );
+
+    console.log("updatedAmenities ... ", updatedAmenities);
+
+    // create request payload
+    const requestBody = {
+      restaurantId,
+      updatedAmenities,
+    };
+
+    console.log("request body ... ", requestBody);
+
+    // api put request
+    const res = await fetch(`/api/restaurants/${restaurantId}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(requestBody),
+    });
+
+    if (!res.ok) {
+      me.showErrorMessage("Error updating restaurant amenities");
+      return;
+    }
+
+    // update Ui
+    document.getElementById("am-" + restaurantId).classList.remove("d-none");
+    document.getElementById("ed-" + restaurantId).classList.remove("d-none");
+    document.getElementById("up-" + restaurantId).classList.add("d-none");
+    document.getElementById("sv-" + restaurantId).classList.add("d-none");
+
+    // reload Restaurants
+    me.reloadRestaurants();
   };
 
   return me;
