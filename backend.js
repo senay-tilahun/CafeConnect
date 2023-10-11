@@ -8,5 +8,6 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.static("frontend"));
 app.use("/api", apiRouter);
+app.use(express.json());
 
 app.listen(PORT, () => console.log(`First listening on port ${PORT}`));
