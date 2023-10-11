@@ -5,7 +5,8 @@ CafeConnect is your go-to platform for discovering restaurants with essential am
 ## Screenshots
 
 Coming soon ...
-<img width="1474" alt="image" src="https://github.com/senay-tilahun/personal-portfolio/assets/116685542/c6741217-20c9-4288-a881-58b71342b6eb">
+
+<!-- <img width="1474" alt="image" src="https://github.com/senay-tilahun/personal-portfolio/assets/116685542/c6741217-20c9-4288-a881-58b71342b6eb"> -->
 
 ## Class reference
 
