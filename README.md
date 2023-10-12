@@ -41,33 +41,35 @@ To set up CafeConnect, you'll need the following dependencies:
 
 To install these dependencies, you can run the following command once you've cloned the repo:
 
-`npm install`
+```
+npm install
+```
 
 ## Usage
 
 ```
-CafeConnect offers the following features:
+- CafeConnect offers the following features:
 
-Restaurant Display: Explore a list of admin-approved featured restaurants, with information about their amenities and locations.
+- Restaurant Display: Explore a list of admin-approved featured restaurants, with information about their amenities and locations.
 
-Filter: Use filters to narrow down your restaurant options based on whether they have wifi, restrooms, or power outlets.
+- Filter: Use filters to narrow down your restaurant options based on whether they have wifi, restrooms, or power outlets.
 
-Create New Restaurant: If you don't see a specific restaurant in our list, you can contribute by adding a new one. Your input will be stored in our PendingRestaurants database and reviewed by our admin team.
+- Create New Restaurant: If you don't see a specific restaurant in our list, you can contribute by adding a new one. Your input will be stored in our PendingRestaurants database and reviewed by our admin team.
 
-Update Restaurant: You can update key information about existing restaurants, such as whether they have wifi, restrooms, or power outlets.
+- Update Restaurant: You can update key information about existing restaurants, such as whether they have wifi, restrooms, or power outlets.
 
-User Messages: If you have concerns or feedback, you can use our user message form to contact us. Enter your name, email, and your message, and we'll get back to you promptly.
+- User Messages: If you have concerns or feedback, you can use our user message form to contact us. Enter your name, email, and your message, and we'll get back to you promptly.
 ```
 
 ## Features
 
-Create New Restaurant: Users can submit information about new restaurants not yet in our database, which will be stored in the PendingRestaurants collection for review.
+- Create New Restaurant: Users can submit information about new restaurants not yet in our database, which will be stored in the PendingRestaurants collection for review.
 
-Update Restaurant: Users can modify key information about restaurants, such as the availability of wifi, restrooms, or power outlets.
+- Update Restaurant: Users can modify key information about restaurants, such as the availability of wifi, restrooms, or power outlets.
 
-Restaurant Display: Admin-approved featured restaurants are prominently displayed for user convenience.
+- Restaurant Display: Admin-approved featured restaurants are prominently displayed for user convenience.
 
-Filter: Users can filter restaurants based on whether they offer wifi, restrooms, or power outlets.
+- Filter: Users can filter restaurants based on whether they offer wifi, restrooms, or power outlets.
 
 ## Configuration
 
