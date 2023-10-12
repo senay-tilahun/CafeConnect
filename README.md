@@ -25,10 +25,11 @@ To set up CafeConnect, you'll need the following dependencies:
 
 ### Dev Dependencies:
 
-eslint: ^8.51.0
-eslint-config-prettier: ^9.0.0
-nodemon: ^3.0.1
-prettier: ^3.0.3
+`- eslint: ^8.51.0
+
+- eslint-config-prettier: ^9.0.0
+- nodemon: ^3.0.1
+- prettier: ^3.0.3`
 
 ### Dependencies:
 
