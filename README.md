@@ -25,18 +25,22 @@ To set up CafeConnect, you'll need the following dependencies:
 
 ### Dev Dependencies:
 
-`- eslint: ^8.51.0
-
+```
+- eslint: ^8.51.0
 - eslint-config-prettier: ^9.0.0
 - nodemon: ^3.0.1
-- prettier: ^3.0.3`
+- prettier: ^3.0.3
+```
 
 ### Dependencies:
 
-express: ^4.18.2
-mongodb: ^6.1.0
+```
+- express: ^4.18.2
+- mongodb: ^6.1.0
+```
 
 To install these dependencies, you can run the following command once you've cloned the repo:
+
 `npm install`
 
 ## Usage
