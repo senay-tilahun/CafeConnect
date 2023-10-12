@@ -1,5 +1,7 @@
 import { MongoClient } from "mongodb";
 
+import { ObjectId } from "mongodb";
+
 function MyDB() {
   const uri = "mongodb://localhost:27017";
   const myDB = {};
@@ -40,17 +42,43 @@ function MyDB() {
     const restaurantsCollection = db.collection("approvedRestaurants");
 
     try {
-      const result = await restaurantsCollection.updateOne(
-        { _id: new MongoClient.ObjectID(restaurantId) },
-        {
-          $inc: updatedAmenities.reduce((acc, amentiy) => {
-            acc[`Amenities.${amentiy}`] += 1;
-            return acc;
-          }, {}),
-        }
-      );
+      const filter = { _id: new ObjectId(restaurantId) };
+      const update = {
+        $inc: updatedAmenities.reduce((acc, amenity) => {
+          return { ...acc, [`Amenities.${amenity}`]: 1 };
+        }, {}),
+      };
+
+      const result = await restaurantsCollection.updateOne(filter, update);
 
       return result.matchedCount > 0;
+    } finally {
+      console.log("db closing connection");
+      client.close();
+    }
+  };
+
+  myDB.addNewRestaurant = async (newRestaurant) => {
+    const { client, db } = connect();
+    const pendingRestaurantsCollection = db.collection("pendingRestaurants");
+
+    try {
+      const result =
+        await pendingRestaurantsCollection.insertOne(newRestaurant);
+      return result;
+    } finally {
+      console.log("db closing connection");
+      client.close();
+    }
+  };
+
+  myDB.addUserMessage = async (newMessage) => {
+    const { client, db } = connect();
+    const userMessagesCollection = db.collection("userMesseges");
+
+    try {
+      const result = await userMessagesCollection.insertOne(newMessage);
+      return result;
     } finally {
       console.log("db closing connection");
       client.close();

@@ -39,7 +39,7 @@ function FrontEnd() {
             <img height="300px"
                 src="${restaurant.image}"
                 class="card-img-top"
-                alt="Airbnb Listing"
+                alt="Featured Restaurant"
             />
             <div class="card-body">
                 <h2 class="card-title">${restaurant.name}</h2>
@@ -119,8 +119,6 @@ function FrontEnd() {
   };
 
   me.savingListener = async (restaurantId) => {
-    console.log("saving updates to ... " + restaurantId);
-
     // api call - update DB
     const updatingRestaurantCheckboxes = document.querySelectorAll(
       ".edit-amenties:checked"
@@ -131,15 +129,11 @@ function FrontEnd() {
       (checkbox) => checkbox.name
     );
 
-    console.log("updatedAmenities ... ", updatedAmenities);
-
     // create request payload
     const requestBody = {
       restaurantId,
       updatedAmenities,
     };
-
-    console.log("request body ... ", requestBody);
 
     // api put request
     const res = await fetch(`/api/restaurants/${restaurantId}`, {

@@ -13,9 +13,7 @@ router.get("/restaurants", async (req, res) => {
 
 router.put("/restaurants/:id", async (req, res) => {
   const restaurantId = req.params.id;
-  // console.log("API - request body ... ", req.body);
-  const updatedAmenities = req.body.updatedAmenities;
-  // console.log("after API - request body ... ", req.body);
+  const { updatedAmenities } = req.body;
 
   try {
     const result = await myDB.updateRestaurantAmenities(
@@ -30,6 +28,36 @@ router.put("/restaurants/:id", async (req, res) => {
   } catch (error) {
     console.log("Error updating amenities:", error);
     res.status(500).json({ error: "Internal server error" });
+  }
+});
+
+router.post("/add-restaurant", async (req, res) => {
+  const newRestaurant = req.body;
+
+  try {
+    const result = await myDB.addNewRestaurant(newRestaurant);
+    res.status(200).json({
+      message: "Restaurant added successfully",
+      restaurantId: result.insertedId,
+    });
+  } catch (error) {
+    console.error("Error adding restaurant:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
+router.post("/user-message", async (req, res) => {
+  const userMessage = req.body;
+
+  try {
+    const result = await myDB.addUserMessage(userMessage);
+    res.status(200).json({
+      message: "User Message added successfully",
+      userMessageId: result.insertedId,
+    });
+  } catch (error) {
+    console.error("Error adding restaurant:", error);
+    res.status(400).json({ error: "Error adding user message" });
   }
 });
 
