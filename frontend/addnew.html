@@ -9,6 +9,9 @@
 
     <!---Main CSS File--->
     <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/form.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
 
     <!--------Bootstrap Files----------->
     <link
@@ -29,26 +32,11 @@
       <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="#"
-            ><img src="images/Logo.jpg" class="logo" alt="Logo"
+            ><img width="40px" src="./images/Logo.png" class="logo" alt="Logo"
           /></a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <i class="fa fa-bars"></i>
-          </button>
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#intro"
-                  >HOME</a
-                >
-              </li>
               <li class="nav-item">
                 <a class="nav-link" href="./index.html">HOME</a>
               </li>
@@ -62,6 +50,46 @@
           </div>
         </div>
       </nav>
+    </section>
+
+    <!----Add New Restaurant Form---->
+    <section id="formsection">
+      <p class="intro">Add New Cafe Here</p>
+      <div class="form-style-6">
+        <h3>Complete the Form below to Add New Cafe</h3>
+        <form>
+          <input type="text" name="cafename" placeholder="Cafe Name" />
+          <input type="text" name="cafeaddress" placeholder="Cafe Address" />
+          <input type="checkbox" id="outlet" name="outlet" value="outlet" />
+          <label for="outlet"> Does the cafe have power outlet</label><br />
+          <input
+            type="checkbox"
+            id="restroom"
+            name="restroomo"
+            value="restroom"
+          />
+          <label for="restroom"> Does the cafe have restroom</label><br />
+          <input type="checkbox" id="wifi" name="wifi" value="wifi" />
+          <label for="wifi"> Does the cafe have wifi</label><br />
+          <input type="submit" value="Send" />
+        </form>
+      </div>
+    </section>
+
+    <!---------------------footer section--------------------------->
+    <section id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 footer-box">
+            <p><b>CONTACT INFORMATION</b></p>
+            <p>Office Address: 600 California Street 20C</p>
+            <p>+1 682-597-7762</p>
+            <p>hu.huiq@northeastern.edu</p>
+          </div>
+        </div>
+        <hr />
+        <p class="copyright">Website Created by Senay Tilahun & Huiqin Hu©</p>
+      </div>
     </section>
   </body>
 </html>
