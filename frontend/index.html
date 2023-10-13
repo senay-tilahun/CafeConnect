@@ -3,118 +3,124 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cafe Connect</title>
+    <title>Home Page</title>
+    <meta content="Home Page" />
+    <meta
+      content="This is the home page of CafeConnect where users can look at our cafe data"
+    />
 
+    <!---Main CSS File--->
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
+
+    <!--------Bootstrap Files----------->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
+      href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css"
     />
   </head>
   <body>
-    <div class="container">
-      <header>
-        <!---NavBar-->
-        <section id="nav-bar">
-          <nav class="navbar">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#"
-                ><img src="images/Logo.jpg" class="logo" alt="Logo"
-              /></a>
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <i class="fa fa-bars"></i>
-              </button>
+    <header>
+      <!---NavBar-->
+      <section id="nav-bar">
+        <nav class="navbar navbar-expand-lg bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"
+              ><img
+                width="40px"
+                src="./images/Logo.png"
+                class="logo"
+                alt="Logo"
+            /></a>
 
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#intro"
-                      >HOME</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#home">HOME</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./addnew.html">ADD NEW CAFE</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./aboutus.html">ABOUT US</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-        </section>
-      </header>
-      <!-- header end -->
-
-      <h1>Cafe Connect</h1>
-
-      <div id="errorMessage"></div>
-
-      <h2>About</h2>
-
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit,
-        accusamus. Molestias laborum numquam impedit tempora incidunt minima,
-        sapiente eveniet facilis, quidem qui ipsa excepturi architecto quos
-        nobis iusto. Officia, dolor! Lo
-      </p>
-
-      <!-- <div id="restaurants"></div> -->
-      <section>
-        <h class="h2"> Featured restaurants in SF</h>
-        <div class="row">
-          <div class="col-2">
-            <div class="h5">Filter by Amenties</div>
-          </div>
-          <div class="col-8">
-            <div class="form-check form-check-inline">
-              <input
-                class="form-check-input amenties"
-                type="checkbox"
-                name="wifi"
-              />
-              <label class="form-check-label" for="inlineCheckbox1">wifi</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input
-                class="form-check-input amenties"
-                type="checkbox"
-                name="outlet"
-              />
-              <label class="form-check-label" for="inlineCheckbox2"
-                >outlet</label
-              >
-            </div>
-            <div class="form-check form-check-inline">
-              <input
-                class="form-check-input amenties"
-                type="checkbox"
-                name="restroom"
-              />
-              <label class="form-check-label" for="inlineCheckbox2"
-                >restroom</label
-              >
+            <div class="collapse navbar-collapse">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#index.html">HOME</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./addnew.html">ADD NEW CAFE</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./aboutus.html">ABOUT US</a>
+                </li>
+              </ul>
             </div>
           </div>
-        </div>
-
-        <div id="restaurants" class="row">
-          <img src="" alt="" />
-        </div>
-        <!-- /card -->
+        </nav>
       </section>
+    </header>
+    <!-- header end -->
+
+    <h1>Cafe Connect</h1>
+
+    <div id="errorMessage"></div>
+
+    <p class="intro">Welcome to CafeConnect</p>
+    <div class="welcomewords">
+      <h3>CafeConnect: Where Every Sip and Bite Comes with Comfort</h3>
+      <p>
+        CafeConnect is your passport to a world of coffee shops and eateries
+        designed with you in mind. At CafeConnect, we bring the convenience of
+        WiFi, restrooms, and power outlets to your table. Join us, and make
+        every connection count. We believe that every meal, every meeting, and
+        every moment should be as enjoyable as it is convenient. Say goodbye to
+        uncertainty and hello to a seamless dining experience. Explore our
+        community-driven directory, connect with coffee enthusiasts and digital
+        nomads, and discover your ideal dining destinations.
+      </p>
     </div>
+
+    <!-- <div id="restaurants"></div> -->
+    <section id="cafelist">
+      <div class="h2">Featured restaurants in SF</div>
+      <div class="row">
+        <div class="col-2">
+          <div class="h5">Filter by Amenties</div>
+        </div>
+        <div class="col-8">
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input amenties"
+              type="checkbox"
+              name="wifi"
+            />
+            <label class="form-check-label" for="inlineCheckbox1">wifi</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input amenties"
+              type="checkbox"
+              name="outlet"
+            />
+            <label class="form-check-label" for="inlineCheckbox2">outlet</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input amenties"
+              type="checkbox"
+              name="restroom"
+            />
+            <label class="form-check-label" for="inlineCheckbox2"
+              >restroom</label
+            >
+          </div>
+        </div>
+      </div>
+
+      <div id="restaurants" class="row">
+        <img src="" alt="" />
+      </div>
+      <!-- /card -->
+    </section>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
@@ -123,5 +129,20 @@
     ></script>
 
     <script src="./js/frontend.js"></script>
+    <!---------------------footer section--------------------------->
+    <section id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 footer-box">
+            <p><b>CONTACT INFORMATION</b></p>
+            <p>Office Address: 600 California Street 20C</p>
+            <p>+1 682-597-7762</p>
+            <p>hu.huiq@northeastern.edu</p>
+          </div>
+        </div>
+        <hr />
+        <p class="copyright">Website Created by Senay Tilahun & Huiqin Hu©</p>
+      </div>
+    </section>
   </body>
 </html>

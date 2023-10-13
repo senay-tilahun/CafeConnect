@@ -26,6 +26,23 @@ h2 {
   text-align: center;
 }
 
+.welcomewords {
+  margin: 20px 40px 20px 40px;
+  border: 5px;
+  border-bottom: 1rem solid;
+  border-color: hsl(210 30% 24%);
+  background-color: #e3eff5;
+  text-align: center;
+}
+
+#cafelist {
+  margin: 20px 40px 20px 40px;
+}
+
+#cafelist .h2 {
+  margin-bottom: 30px;
+}
+
 .row.text-center {
   display: flex;
   justify-content: space-between;
