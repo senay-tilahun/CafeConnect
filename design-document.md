@@ -24,4 +24,4 @@
 
 ## Mock Up
 
-![mockup](./images/mockup.png)
+![mockup](./frontend/images/mockup.png)
