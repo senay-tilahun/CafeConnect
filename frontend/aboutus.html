@@ -9,6 +9,8 @@
 
     <!---Main CSS File--->
     <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/form.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
 
     <!--------Bootstrap Files----------->
     <link
@@ -29,7 +31,7 @@
       <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="#"
-            ><img src="images/Logo.jpg" class="logo" alt="Logo"
+            ><img width="40px" src="./images/Logo.png" class="logo" alt="Logo"
           /></a>
           <button
             class="navbar-toggler"
@@ -59,17 +61,6 @@
                 <a class="nav-link" href="#aboutus">ABOUT US</a>
               </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
           </div>
         </div>
       </nav>
@@ -81,7 +72,7 @@
       <p class="intro">Welcome to CafeConnect</p>
 
       <div class="row text-center">
-        <section class="col-md-5">
+        <section class="col-md-4">
           <h3>Our Story</h3>
           <p>
             CafeConnect was born out of a shared desire for a more convenient
@@ -96,7 +87,7 @@
             you can make informed decisions and enjoy your time out.
           </p>
         </section>
-        <section class="col-md-5">
+        <section class="col-md-4">
           <h3>Our Vision</h3>
           <p>
             Our vision is a world where you can explore the culinary scene with
@@ -107,38 +98,40 @@
           </p>
         </section>
       </div>
-      <section class="col-md-4">
-        <h3>What Sets Us Apart</h3>
-        <ul>
-          <li>
-            <b>User-Centric:</b> At CafeConnect, your satisfaction is our
-            priority. We continuously work to improve the user experience,
-            making it easy for you to find your perfect spot.
-          </li>
-          <li>
-            <b>Community-Driven:</b> Our platform thrives on contributions from
-            our community. User reviews and recommendations are the heart of
-            what we do.
-          </li>
-          <li>
-            <b>Transparency:</b> We're dedicated to providing accurate and
-            up-to-date information, ensuring you have the data you need to make
-            informed choices.
-          </li>
-        </ul>
-      </section>
-      <section class="col-md-4">
-        <h3>Join Us</h3>
-        <p>
-          CafeConnect is more than just a website; it's a growing community of
-          individuals who appreciate convenience and comfort. We invite you to
-          explore our diverse range of cafes and restaurants, share your
-          experiences, and be a part of this exciting journey. Together, we're
-          redefining the way we connect and dine. Join the CafeConnect community
-          today and discover coffee shops and eateries that cater to your
-          specific needs.
-        </p>
-      </section>
+      <div class="row text-center">
+        <section class="col-md-4">
+          <h3>What Sets Us Apart</h3>
+          <ul>
+            <li>
+              <b>User-Centric:</b> At CafeConnect, your satisfaction is our
+              priority. We continuously work to improve the user experience,
+              making it easy for you to find your perfect spot.
+            </li>
+            <li>
+              <b>Community-Driven:</b> Our platform thrives on contributions
+              from our community. User reviews and recommendations are the heart
+              of what we do.
+            </li>
+            <li>
+              <b>Transparency:</b> We're dedicated to providing accurate and
+              up-to-date information, ensuring you have the data you need to
+              make informed choices.
+            </li>
+          </ul>
+        </section>
+        <section class="col-md-4">
+          <h3>Join Us</h3>
+          <p>
+            CafeConnect is more than just a website; it's a growing community of
+            individuals who appreciate convenience and comfort. We invite you to
+            explore our diverse range of cafes and restaurants, share your
+            experiences, and be a part of this exciting journey. Together, we're
+            redefining the way we connect and dine. Join the CafeConnect
+            community today and discover coffee shops and eateries that cater to
+            your specific needs.
+          </p>
+        </section>
+      </div>
 
       <div class="form-style-6">
         <h3>Contact Us</h3>
@@ -149,7 +142,21 @@
           <input type="submit" value="Send" />
         </form>
       </div>
-      <p>Thank you for being a part of the CafeConnect experience.</p>
     </div>
+    <!---------------------footer section--------------------------->
+    <section id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 footer-box">
+            <p><b>CONTACT INFORMATION</b></p>
+            <p>Office Address: 600 California Street 20C</p>
+            <p>+1 682-597-7762</p>
+            <p>hu.huiq@northeastern.edu</p>
+          </div>
+        </div>
+        <hr />
+        <p class="copyright">Website Created by Senay Tilahun & Huiqin Hu©</p>
+      </div>
+    </section>
   </body>
 </html>
