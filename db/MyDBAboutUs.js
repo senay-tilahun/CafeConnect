@@ -13,7 +13,7 @@ function MyDB() {
     return { client, db };
   };
 
-  //   Create API
+  //  Create API
   myDB.addUserMessage = async (newMessage) => {
     const { client, db } = connect();
     const userMessagesCollection = db.collection("userMesseges");
