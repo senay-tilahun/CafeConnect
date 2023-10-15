@@ -40,6 +40,7 @@ cd cafeconnect
 ### Dependencies:
 
 ```
+- Node.js
 - express: ^4.18.2
 - mongodb: ^6.1.0
 ```
