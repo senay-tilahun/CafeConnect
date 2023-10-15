@@ -1,6 +1,6 @@
 import { MongoClient } from "mongodb";
 
-import { ObjectId } from "mongodb";
+// import { ObjectId } from "mongodb";
 
 function MyDB() {
   const uri = "mongodb://localhost:27017";
