@@ -3,7 +3,7 @@
 ## Project Description:
 
 - We built an useful website that enable users to easily discover and choose dining destinations based on specific amenities including power outlet, restroom, and wifi.
-- Users will have oppportunity to filter existing restaurant/cafe list based on their desired amenities
+- Users will have opportunity to filter existing restaurant/cafe list based on their desired amenities
 - Users can contribute data points to the existing cafe list by giving upvotes to amenities of particular cafe
 - Allow users to contribute to the list by adding new restaurant in the database
 
