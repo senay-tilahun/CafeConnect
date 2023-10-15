@@ -4,9 +4,11 @@ CafeConnect is your go-to platform for discovering restaurants with essential am
 
 ## Screenshots
 
-Coming soon ...
+<img width="1000" alt="homepage screenshot" src="./frontend/images/home-page.png">
 
-<!-- <img width="1474" alt="image" src="https://github.com/senay-tilahun/personal-portfolio/assets/116685542/c6741217-20c9-4288-a881-58b71342b6eb"> -->
+<img width="1000" alt="about us page screenshot" src="./frontend/images/about-us.png">
+
+<img width="1000" alt="add new restaurant page  screenshot" src="./frontend/images/add-new.png">
 
 ## Class reference
 
@@ -23,13 +25,16 @@ You can visit the live website here: coming soon ...
 
 To set up CafeConnect, you'll need the following dependencies:
 
-### Dev Dependencies:
+Clone the repository:
 
 ```
-- eslint: ^8.51.0
-- eslint-config-prettier: ^9.0.0
-- nodemon: ^3.0.1
-- prettier: ^3.0.3
+git clone https://github.com/senay-tilahun/CafeConnect
+```
+
+Navigate to the root directory:
+
+```
+cd cafeconnect
 ```
 
 ### Dependencies:
@@ -43,6 +48,12 @@ To install these dependencies, you can run the following command once you've clo
 
 ```
 npm install
+```
+
+Start the server:
+
+```
+npm start
 ```
 
 ## Usage
@@ -78,7 +89,3 @@ There are no specific configuration requirements for CafeConnect. The project is
 ## License
 
 This project is licensed under the MIT License.
-
-## Credits
-
-coming soon ...
