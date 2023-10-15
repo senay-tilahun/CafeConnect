@@ -3,8 +3,10 @@
 CafeConnect is your go-to platform for discovering restaurants with essential amenities, catering to digital nomads, students, and anyone seeking a place to get wifi access, use restroom, or charge their phone. An important feature is a database of restaurants in the Chinatown, San Francisco area on the front page, with key information displayed. It will also have a form to let users add information about new restaurants in the area, and a form to let users update those key attributes (wifi, power outlet, restroom) for existing restaurants in the database.
 
 Created by Senay Tilahun & Huiqin Hu
+
 Slides Link: https://docs.google.com/presentation/d/1TQJIIyhK1SATXGa7glXu7vKPTHJdtsIZ0w3QTDOmchg/edit?usp=sharing
-The design document is available at [here](./design-document.md).
+
+The design document is available at [here](./design-document.md)
 
 ## Screenshots
 
