@@ -34,10 +34,10 @@ function FrontEnd() {
 
   const renderRestaurant = (restaurant) => {
     return `
-    <div class="col-4">
-        <div class="restaurant card">
+    <div class="col-3">
+        <div id="restaurant-card" class="restaurant card">
             <img height="300px"
-                src="${restaurant.image}"
+                src="./images/${restaurant.image}"
                 class="card-img-top"
                 alt="Featured Restaurant"
             />

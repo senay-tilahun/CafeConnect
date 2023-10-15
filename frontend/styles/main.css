@@ -10,6 +10,15 @@ h1 {
   font-size: 64px;
   margin-bottom: 40px;
 }
+
+.card-body .card-title {
+  font-family: SpaceGrotesk-Medium;
+  max-width: 520px;
+  font-weight: 700;
+  color: #010101;
+  font-size: 16px;
+}
+
 h2 {
   font-family: SpaceGrotesk-Medium;
   max-width: 520px;
@@ -17,6 +26,7 @@ h2 {
   color: #fff;
   font-size: 16px;
 }
+
 
 .intro {
   font-size: clamp(3rem, 15vmin, 8rem);
@@ -33,6 +43,10 @@ h2 {
   border-color: hsl(210 30% 24%);
   background-color: #e3eff5;
   text-align: center;
+}
+
+#restaurant-card {
+  margin: 10px 5px 10px 5px;
 }
 
 #cafelist {
