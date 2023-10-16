@@ -46,18 +46,19 @@ router.post("/add-restaurant", async (req, res) => {
   }
 });
 
-router.post("/user-message", async (req, res) => {
-  const userMessage = req.body;
+router.delete("/delete-restaurant/:id", async (req, res) => {
+  const id = req.params.id;
 
   try {
-    const result = await myDB.addUserMessage(userMessage);
-    res.status(200).json({
-      message: "User Message added successfully",
-      userMessageId: result.insertedId,
-    });
+    const result = await myDB.deleteRestaurant(id);
+    if (result.deletedCount > 0) {
+      res.status(200).json({ message: "Restaurant deleted successfully" });
+    } else {
+      res.status(404).json({ error: "Restaurant not found" });
+    }
   } catch (error) {
-    console.error("Error adding restaurant:", error);
-    res.status(400).json({ error: "Error adding user message" });
+    console.error("Error deleting restaurant:", error);
+    res.status(400).json({ error: "Error deleting restaurant" });
   }
 });
 
