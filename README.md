@@ -25,7 +25,7 @@ Link: https://johnguerra.co/classes/webDevelopment_fall_2023/
 Authors:
 Huiqin Hu && Senay Tilahun
 
-You can visit the live website here: coming soon ...
+You can visit the live website here: https://cafeconnect-t6u0.onrender.com/
 
 ## Installation
 
@@ -46,9 +46,10 @@ cd cafeconnect
 ### Dependencies:
 
 ```
-- Node.js
+- Node.js >=20.8.0
 - express: ^4.18.2
 - mongodb: ^6.1.0
+- dotenv": ^16.3.1
 ```
 
 To install these dependencies, you can run the following command once you've cloned the repo:
