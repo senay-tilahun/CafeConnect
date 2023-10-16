@@ -1,7 +1,9 @@
+import "dotenv/config"; // to load .env file
+
 import { MongoClient, ObjectId } from "mongodb";
 
 function MyDB() {
-  const uri = "mongodb://localhost:27017";
+  const uri = process.env.MONGO_URL || "mongodb://localhost:27017";
   const myDB = {};
 
   const connect = () => {
