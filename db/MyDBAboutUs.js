@@ -1,6 +1,4 @@
-import { MongoClient } from "mongodb";
-
-// import { ObjectId } from "mongodb";
+import { MongoClient, ObjectId } from "mongodb";
 
 function MyDB() {
   const uri = "mongodb://localhost:27017";
@@ -13,13 +11,55 @@ function MyDB() {
     return { client, db };
   };
 
-  //  Create API
   myDB.addUserMessage = async (newMessage) => {
     const { client, db } = connect();
     const userMessagesCollection = db.collection("userMesseges");
 
     try {
       const result = await userMessagesCollection.insertOne(newMessage);
+      return result;
+    } finally {
+      console.log("db closing connection");
+      client.close();
+    }
+  };
+
+  myDB.updateUserMessage = async (id, updatedMessage) => {
+    const { client, db } = connect();
+    const userMessagesCollection = db.collection("userMessages");
+
+    try {
+      const filter = { _id: new ObjectId(id) };
+      const updateDoc = { $set: updatedMessage };
+      const result = await userMessagesCollection.updateOne(filter, updateDoc);
+      return result;
+    } finally {
+      console.log("db closing connection");
+      client.close();
+    }
+  };
+
+  myDB.getUserMessage = async (id) => {
+    const { client, db } = connect();
+    const userMessagesCollection = db.collection("userMessages");
+
+    try {
+      const filter = { _id: new ObjectId(id) };
+      const result = await userMessagesCollection.findOne(filter);
+      return result;
+    } finally {
+      console.log("db closing connection");
+      client.close();
+    }
+  };
+
+  myDB.deleteUserMessage = async (id) => {
+    const { client, db } = connect();
+    const userMessagesCollection = db.collection("userMessages");
+
+    try {
+      const filter = { _id: new ObjectId(id) };
+      const result = await userMessagesCollection.deleteOne(filter);
       return result;
     } finally {
       console.log("db closing connection");

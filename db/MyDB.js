@@ -1,6 +1,4 @@
-import { MongoClient } from "mongodb";
-
-import { ObjectId } from "mongodb";
+import { MongoClient, ObjectId } from "mongodb";
 
 function MyDB() {
   const uri = "mongodb://localhost:27017";
@@ -60,11 +58,10 @@ function MyDB() {
 
   myDB.addNewRestaurant = async (newRestaurant) => {
     const { client, db } = connect();
-    const pendingRestaurantsCollection = db.collection("pendingRestaurants");
+    const restaurantsCollection = db.collection("approvedRestaurants");
 
     try {
-      const result =
-        await pendingRestaurantsCollection.insertOne(newRestaurant);
+      const result = await restaurantsCollection.insertOne(newRestaurant);
       return result;
     } finally {
       console.log("db closing connection");
@@ -72,12 +69,14 @@ function MyDB() {
     }
   };
 
-  myDB.addUserMessage = async (newMessage) => {
-    const { client, db } = connect();
-    const userMessagesCollection = db.collection("userMesseges");
+  // Delete
+  myDB.deleteRestaurant = async (id) => {
+    const { client, db } = await connect();
+    const restaurantsCollection = db.collection("approvedRestaurants");
 
     try {
-      const result = await userMessagesCollection.insertOne(newMessage);
+      const filter = { _id: new ObjectId(id) };
+      const result = await restaurantsCollection.deleteOne(filter);
       return result;
     } finally {
       console.log("db closing connection");
