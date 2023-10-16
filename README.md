@@ -4,6 +4,10 @@ CafeConnect is your go-to platform for discovering restaurants with essential am
 
 Created by Senay Tilahun & Huiqin Hu
 
+Public Project URL: https://cafeconnect-t6u0.onrender.com
+
+Video Presentation Link: https://youtu.be/z7Y1N1Du0Ls
+
 Slides Link: https://docs.google.com/presentation/d/1TQJIIyhK1SATXGa7glXu7vKPTHJdtsIZ0w3QTDOmchg/edit?usp=sharing
 
 The design document is available at [here](./design-document.md)
