@@ -3,17 +3,17 @@ import express from "express";
 import { myDB } from "../db/MyDB.js";
 
 const router = express.Router();
-
+// this is well organized.
 router.get("/restaurants", async (req, res) => {
   console.log("Should return admin approved restaurants");
   const restaurants = await myDB.getRestaurants(req.query.amenities);
-
+  // just like the other functions, it would better to add try and catch block just in case the query is unsuccessful for some reason.
   res.json(restaurants);
 });
 
 router.put("/restaurants/:id", async (req, res) => {
   const restaurantId = req.params.id;
-  const { updatedAmenities } = req.body;
+  const { updatedAmenities } = req.body; // this is a very useful way of destructuring the object.
 
   try {
     const result = await myDB.updateRestaurantAmenities(
@@ -51,7 +51,7 @@ router.delete("/delete-restaurant/:id", async (req, res) => {
 
   try {
     const result = await myDB.deleteRestaurant(id);
-    if (result.deletedCount > 0) {
+    if (result.deletedCount > 0) { 
       res.status(200).json({ message: "Restaurant deleted successfully" });
     } else {
       res.status(404).json({ error: "Restaurant not found" });
